@@ -1,10 +1,12 @@
 package Leetcode_questions;
 
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class Contains_Duplicates {
     public static void main(String[] args) {
         int[] arr = {2,14,18,22,22};
+//        Scanner sc = Scanner
         int n = arr.length;
         HashMap<Integer,Integer> map = new HashMap<>();
         for(int i = 0 ; i<n ; i++) {

@@ -2,34 +2,40 @@ package Leetcode_questions;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-
+import java.util.*;
 public class FourSum {
     public static void main(String[] args) {
-        int[] nums = {1,0,-1,0,-2,2};
+        int[] nums = {2,2,2,2,2};
         int n = nums.length;
-        int target = 0;
         Arrays.sort(nums);
-        ArrayList<Integer> li = new ArrayList<>();
-         for(int i = 0 ; i<n-3 ; i++){
-            int l = i+1;
-            int h = nums.length -1;
-            int sh = n - i - 1;
-            while (l<=h){
-                int sum = nums[i] + nums[l] + nums[sh] + nums[h];
-                if(sum == target){
-                    li.add(nums[i] );
-                    li.add(nums[l] );
-                    li.add(nums[sh] );
-                    li.add(nums[h] );
-                    l++;
-                    h--;
-                }
-                if(nums[l]+nums[h]>0){
-                    h--;
-                } else {
-                    l++;
+        int target = 8;
+        List<List<Integer>> li = new ArrayList<>();
+        for(int i = 0 ; i<n ; i++){
+            if(i>0 && nums[i] == nums[i-1]) continue;
+            for(int j = i+1 ; j<n ; j++){
+                if(j!=i+1 && nums[j] == nums[j-1]) continue;
+                int k = j +1;
+                int l = n -1;
+                while (k<l){
+                    int sum = nums[i] + nums[j] + nums[k] + nums[l];
+                    if(sum ==target){
+                        ArrayList<Integer> inli = new ArrayList<>();
+                        inli.add(nums[i]);
+                        inli.add(nums[j]);
+                        inli.add(nums[k]);
+                        inli.add(nums[l]);
+                        li.add(inli);
+                        k++; l--;
+                        while (k<l && nums[k] == nums[k-1]) k++;
+                        while (k<l && nums[l] == nums[l+1]) l--;
+                    } else if (sum<target) {
+                        k++;
+                    } else {
+                        l--;
+                    }
                 }
             }
         }
+        System.out.println(li);
     }
 }

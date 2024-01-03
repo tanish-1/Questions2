@@ -11,7 +11,7 @@ public class Rank_Tansform_of_an_Array {
         Arrays.sort(arr2);
         HashMap<Integer,Integer> map = new HashMap<>();
         int count = 1;
-        for(int i = 0 ; i<n ; i++){
+        for(int i = 0 ; i<n ; i++) {
             if(!(map.containsKey(arr2[i]))){
 
                 map.put(arr2[i],count++);
