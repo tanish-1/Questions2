@@ -33,6 +33,10 @@ public class Main {
         System.out.println(box3.w);
 //        BoxWeight box4 = new Box();
 //        System.out.println(box4.weight);
+        Ploymorphism shape = new Ploymorphism();
+        Circle circle = new Circle();
+        circle.area();
+        shape.area();
     }
 
 }
