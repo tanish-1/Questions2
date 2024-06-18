@@ -1,4 +1,4 @@
-package rev;
+package rev.sorting_rev;
 
 import java.util.Arrays;
 
