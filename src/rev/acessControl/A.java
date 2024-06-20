@@ -12,7 +12,9 @@ public class A {
     public void setNum(int num) {
         this.num = num;
     }
-
+   static void greet(){
+       System.out.println("hello");
+   }
     public A(int num, String name) {
         this.num = num;
         this.name = name;
