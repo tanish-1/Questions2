@@ -24,6 +24,7 @@ public class MissingNumber2 {
                 return j;
             }
         }
+
         return arr.length;
     }
     public static void main(String[] args) {
