@@ -9,7 +9,7 @@ public class LetterCombination {
 //        char ch = str.charAt(0);
         int num = str.charAt(0) - '0';
 //        int num = Integer.parseInt(String.valueOf(ch));
-        int start = (num-2)*3;
+        int start = (num-1)*3;
         int end = start+3;
         for (int i = start; i < end; i++) {
 
@@ -19,8 +19,8 @@ public class LetterCombination {
 
     }
     public static void main(String[] args) {
-        System.out.println((char)('a'+24));
-//        System.out.println(letterComb("12",""));
-       letterComb("8","");
+//        System.out.println((char)('a'+24));
+        letterComb("12","");
+//       letterComb("8","");
     }
 }
